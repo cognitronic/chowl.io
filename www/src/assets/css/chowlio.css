@@ -18,7 +18,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #cccccc;
 }
 
 h1,
@@ -59,7 +59,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: #cccccc;
 }
 
 hr.star-primary {
@@ -78,7 +78,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: #cccccc;
 }
 
 header .container {
@@ -132,6 +132,7 @@ header .intro-text .skills {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
+        color: white;
     }
 
     .navbar-fixed-top.navbar-shrink {
@@ -147,6 +148,7 @@ header .intro-text .skills {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    color: white;
 }
 
 .navbar a:focus {
@@ -159,11 +161,26 @@ header .intro-text .skills {
 
 .navbar .navbar-nav li a:focus {
     outline: 0;
+    color: white;
 }
 
 .navbar-default,
 .navbar-inverse {
     border: 0;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: #cccccc;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+    color: #cccccc;
+    background-color: transparent;
 }
 
 section {
@@ -177,7 +194,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: #cccccc;
 }
 
 @media(max-width:767px) {
@@ -261,7 +278,7 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: #cccccc;
     background: #fff;
 }
 
@@ -314,7 +331,7 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: #cccccc;
 }
 
 form .row:first-child .floating-label-form-group {
