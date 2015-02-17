@@ -2,12 +2,6 @@
  * Created by Danny Schreiber on 2/17/15.
  */
 
-
-var post = require('../controllers/post');
-var profile = require('../controllers/profile');
-var portfolio = require('../controllers/portfolio');
-var resume = require('../controllers/resume');
-var emailer = require('../controllers/email');
 var auth = require('../controllers/auth');
 var index = require('../controllers/index');
 var express = require('express');
@@ -53,67 +47,6 @@ module.exports = function(app){
      */
     _router.route('/login')
         .post(auth.authenticate);
-
-
-    /**
-     * Post Routes
-     */
-    _router.route('/all-posts')
-        .get(post.getAllPosts);
-
-    _router.route('/posts')
-        .get(post.getPosts);
-
-    _router.route('/posts')
-        .post(restrict, post.postPost);
-
-    _router.route('/post/:title')
-        .get(post.getPost);
-
-    _router.route('/post/:title')
-        .put(restrict, post.putPost);
-
-
-    /**
-     * Profile Routes
-     */
-
-    _router.route('/profile')
-        .get(profile.getProfile);
-
-
-    /**
-     * Portfolio Routes
-     */
-
-    _router.route('/portfolio')
-        .get(portfolio.getPortfolio);
-
-    _router.route('/portfolio/:title')
-        .get(portfolio.getPortfolioByTitle);
-
-    _router.route('/portfolio/:title')
-        .put(restrict, portfolio.putPortfolio);
-
-    /**
-     * Resume Routes
-     */
-
-    _router.route('/resume')
-        .get(resume.getResume);
-
-    _router.route('/resume')
-        .put(restrict, resume.putResume);
-
-
-    /**
-     * Email routes
-     */
-
-    _router.route('/email')
-        .post(restrict, emailer.sendEmail);
-
-
 
 
 

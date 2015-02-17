@@ -20,16 +20,15 @@ var RedisStore = require('connect-redis')(session);
 module.exports = function(app, config){
 
 
-    var redis = require('redis');
-    var url = require('url');
-    var redisURL = url.parse(process.env.REDISCLOUD_URL || '');
-    var client = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
-    client.auth(redisURL.auth.split(":")[1]);
+    //var redis = require('redis');
+    //var url = require('url');
+    //var redisURL = url.parse(process.env.REDISCLOUD_URL || '');
+    //var client = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
+    //client.auth(redisURL.auth.split(":")[1]);
 
     app.use(session({
         secret: 'code fighter fuh life',
         resave: false,
-        store: new RedisStore({client: client}),
         saveUninitialized: true
     }));
     app.use(express.static(path.join(config.rootPath, '/www')));
