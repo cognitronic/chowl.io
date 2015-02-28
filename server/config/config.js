@@ -8,9 +8,9 @@ var rootPath = path.normalize(__dirname  + '../../../');
 module.exports = {
     development: {
         rootPath: rootPath,
-        baseUrl: 'http://localhost:3000',
+        baseUrl: 'http://localhost:3002',
         db: 'mongodb://dannyschreiber.net/chowlio',
-        port: process.env.PORT || 3000
+        port: process.env.PORT || 3002
     },
     production: {
         rootPath: rootPath,

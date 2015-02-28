@@ -151,7 +151,7 @@ module.exports = function (grunt) {
         'concat',
 	    'concat:dist_services',
         'concat:dist_css',
-        'uglify:dist',
+        //'uglify:dist',
 	    'uglify:dist_services',
         'cssmin:dist_css',
         'copy:dist'
